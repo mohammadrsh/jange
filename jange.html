@@ -15,11 +15,17 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
     <script src="https://unpkg.com/lucide@latest"></script>
-
+    <script src="stateSelector.js"></script>
     <link rel="stylesheet" href="app.css" />
 </head>
 
 <body>
+    <div id="stateSelector" class="stateSelectorWrapper">
+        <p class="stateSelectorTitle">Ostan:</p>
+        <input type="text" id="stateInput" autocomplete="off" />
+        <button id="toggleDropdown">▼</button>
+        <ul id="dropdownList" class="dropdown hidden"></ul>
+    </div>
     <div id="map"></div>
 </body>
 
