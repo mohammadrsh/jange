@@ -63,16 +63,16 @@ fetch("states.json")
     renderDropdown(states);
   });
 
-function renderDropdown(list) {
+function renderDropdown(states) {
   dropdown.innerHTML = "";
-  list.forEach((state) => {
+  states.forEach((state) => {
     const li = document.createElement("li");
     li.textContent = state.name;
     li.dataset.id = state.id;
     li.addEventListener("click", () => {
       input.value = state.name;
       dropdown.classList.add("hidden");
-      goToLocation(35.6892, 51.3890, 10);
+      goToLocation(state.lat, state.lon, 10);
     });
     dropdown.appendChild(li);
   });
